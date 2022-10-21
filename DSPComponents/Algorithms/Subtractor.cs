@@ -19,7 +19,20 @@ namespace DSPAlgorithms.Algorithms
         /// </summary>
         public override void Run()
         {
-            throw new NotImplementedException();
+            
+            List<float> Output = new List<float>();
+            float r = -1.0f;
+            for (int i = 0; i < InputSignal2.Samples.Count; i++)
+            {
+                InputSignal2.Samples[i] *= r ;
+            }
+            for (int i = 0; i < InputSignal1.Samples.Count; i++)
+            {
+                float F = InputSignal1.Samples[i] + InputSignal2.Samples[i];
+                Output.Add(F);
+            }
+            OutputSignal = new Signal( Output , false);
+            //throw new NotImplementedException();
         }
     }
 }
