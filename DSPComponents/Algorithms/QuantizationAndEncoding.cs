@@ -21,7 +21,49 @@ namespace DSPAlgorithms.Algorithms
 
         public override void Run()
         {
-            throw new NotImplementedException();
+            if (InputLevel <= 0)
+                InputLevel = (int) Math.Pow(2, InputNumBits);
+            else
+                InputNumBits = ((int)Math.Log(InputLevel , 2.0));
+
+            float maximum = InputSignal.Samples.Max();
+            float minimum = InputSignal.Samples.Min();
+            float delta = (float) (maximum - minimum) / InputLevel , halfofdelta = (float)(delta / 2) + 0.000002f;
+            List<float> QuantizedValues = new List<float>();
+            List<String> EncodedValues = new List<String>();
+            List<int> IntervalIndices = new List<int>();
+            List<float> SampledError = new List<float>();
+            List<float> Midpoints = new List<float>();
+            float index = minimum;
+            for (int i = 0; i < InputLevel; i++)
+            {
+                Midpoints.Add((float)(index + index + delta)/2);
+                index += delta;
+            }
+            for (int i = 0; i < InputSignal.Samples.Count; i++)
+            {
+                for (int j = 0; j < Midpoints.Count; j++)
+                {
+                    float diff = Math.Abs(InputSignal.Samples[i] - Midpoints[j]);
+                    if (diff <= halfofdelta)
+                    {
+                        QuantizedValues.Add(Midpoints[j]);
+                        IntervalIndices.Add(j + 1);
+                        EncodedValues.Add(Convert.ToString(j, 2));
+                        SampledError.Add(Midpoints[j] - InputSignal.Samples[i]);
+                        break;
+                    }
+                }
+            }
+            for (int i = 0; i < EncodedValues.Count; i++)
+            {
+                    EncodedValues[i] = EncodedValues[i].PadLeft(InputNumBits, '0');  
+            }
+
+            OutputQuantizedSignal = new Signal( QuantizedValues,false);
+            OutputIntervalIndices = IntervalIndices;
+            OutputEncodedSignal = EncodedValues;
+            OutputSamplesError = SampledError;
         }
     }
 }
