@@ -104,7 +104,7 @@ namespace DSPComponentsUnitTest
             {
                 if ((!float.IsNaN(l1[i]) && float.IsNaN(l2[i])) || (float.IsNaN(l1[i]) && !float.IsNaN(l2[i])))
                     return false;
-                else if (Math.Abs(l1[i] - l2[i]) > 0.0001)
+                else if (Math.Abs(l1[i] - l2[i]) > 0.01)
                     return false;
             }
 
@@ -123,7 +123,7 @@ namespace DSPComponentsUnitTest
                 if ((!float.IsNaN(l1.Samples[i]) && float.IsNaN(l2.Samples[i]))
                     || (float.IsNaN(l1.Samples[i]) && !float.IsNaN(l2.Samples[i])))
                     return false;
-                else if (Math.Abs(l1.Samples[i] - l2.Samples[i]) > 0.0001)
+                else if (Math.Abs(l1.Samples[i] - l2.Samples[i]) > 0.001)
                     return false;
                 else if (l1.SamplesIndices[i] != l2.SamplesIndices[i])
                     return false;
@@ -136,6 +136,7 @@ namespace DSPComponentsUnitTest
             if (l1.Count != l2.Count)
                 return false;
 
+
             for (int i = 0; i < l1.Count; i++)
             {
                 l1[i] = UnitTestUtitlities.RoundPhaseShift(l1[i]);
@@ -143,8 +144,10 @@ namespace DSPComponentsUnitTest
 
                 if ((!float.IsNaN(l1[i]) && float.IsNaN(l2[i])) || (float.IsNaN(l1[i]) && !float.IsNaN(l2[i])))
                     return false;
-                else if (Math.Abs(l1[i] - l2[i]) > 0.0001)
+                else if (Math.Abs(l1[i] - l2[i]) > 0.001)
+                {
                     return false;
+                }
             }
 
             return true;

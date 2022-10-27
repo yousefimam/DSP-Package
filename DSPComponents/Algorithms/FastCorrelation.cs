@@ -52,7 +52,7 @@ namespace DSPAlgorithms.Algorithms
 
                 Complex_InputSignal1 = FFT(InputSignal1.Samples);
                 for (int i = 0; i < Complex_InputSignal1.Count; i++)
-                    Complex_InputSignal1[i] = new Complex(Complex_InputSignal1[i].Real,- Complex_InputSignal1[i].Imaginary );
+                    Complex_InputSignal1[i] = new Complex(Complex_InputSignal1[i].Real, -Complex_InputSignal1[i].Imaginary);
 
                 Complex_InputSignal2 = FFT(InputSignal1.Samples);
 
@@ -101,7 +101,7 @@ namespace DSPAlgorithms.Algorithms
                 List<Complex> InputSignal1Complex = new List<Complex>();
                 InputSignal1Complex = FFT(signal1_samples);
                 for (int i = 0; i < InputSignal1Complex.Count; i++)
-                    InputSignal1Complex[i] = new Complex(InputSignal1Complex[i].Real,- InputSignal1Complex[i].Imaginary );
+                    InputSignal1Complex[i] = new Complex(InputSignal1Complex[i].Real, -InputSignal1Complex[i].Imaginary);
 
                 List<Complex> InputSignal2Complex = new List<Complex>();
                 InputSignal2Complex = FFT(signal2_samples);
@@ -188,8 +188,8 @@ namespace DSPAlgorithms.Algorithms
                     double sum = i * 2 * Math.PI / harmonics_amp_pha.Count;
                     double real = Math.Cos(sum);
                     double imag = Math.Sin(sum);
-                    harmonics[i] = even_harmonics[i]+ odd_harmonics[i]* new Complex(real, imag);
-                    harmonics[i + even.Count] = even_harmonics[i]- odd_harmonics[i]* new Complex(real, imag);
+                    harmonics[i] = even_harmonics[i] + odd_harmonics[i] * new Complex(real, imag);
+                    harmonics[i + even.Count] = even_harmonics[i] - odd_harmonics[i] * new Complex(real, imag);
                 }
 
                 return harmonics;

@@ -49,13 +49,15 @@ namespace DSPAlgorithms.Algorithms
                 f.InputStopBandAttenuation = 50;
                 f.InputCutOffFrequency = 1500;
                 f.InputTransitionBand = 500;
-                f.Run();              
+                f.Run(); 
+                int j = f.OutputYn.SamplesIndices[0];
+                List<int> list_of_indecies = new List<int>();
                 for (int i = 0; i <f.OutputYn.Samples.Count();i+=M )
                 {
                     list_of_signal_values.Add(f.OutputYn.Samples[i]);
-                   
+                    list_of_indecies.Add(j++);
                 }
-                OutputSignal = new Signal(list_of_signal_values, false);
+                OutputSignal = new Signal(list_of_signal_values , list_of_indecies , false);
             }
             else if(L!=0 && M != 0)
             {
@@ -80,13 +82,15 @@ namespace DSPAlgorithms.Algorithms
                 f.InputTransitionBand = 500;
                 f.Run();
                 List<float> list_of_signal_values3 = new List<float>();
-
+                int k = f.OutputYn.SamplesIndices[0];
+                List<int> list_of_indecies = new List<int>();
                 for (int i = 0; i < f.OutputYn.Samples.Count(); i += M)
                 {
                     list_of_signal_values3.Add(f.OutputYn.Samples[i]);
+                    list_of_indecies.Add(k++);
 
                 }
-                OutputSignal = new Signal(list_of_signal_values3, false);
+                OutputSignal = new Signal(list_of_signal_values3, list_of_indecies , false);
             }
             else
                 Console.WriteLine("error message");

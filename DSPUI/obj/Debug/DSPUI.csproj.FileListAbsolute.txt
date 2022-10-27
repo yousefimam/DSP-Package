@@ -61,3 +61,32 @@ G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPTo
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.Cache
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\Media\Warning.png
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\DSPUI.exe.config
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\DSPUI.exe
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\DSPUI.pdb
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\DSPComponents.dll
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\OxyPlot.dll
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\OxyPlot.WindowsForms.dll
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\DSPComponents.pdb
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\OxyPlot.pdb
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\OxyPlot.xml
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\OxyPlot.WindowsForms.pdb
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\bin\Debug\OxyPlot.WindowsForms.xml
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.AssemblyReference.cache
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.DiscreteFourierTransform.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FastFourierTransform.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FileInputSignal.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FIR.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MovingAverage.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MultiplySignalByConstant.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Normalizer.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.QuantizationAndEncoding.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Shifter.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.cache
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.CoreCompileInputs.cache
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.CopyComplete
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.exe
+D:\College\7th semester\DSP\fcisdsp-dsp.toolbox-78ddd969882b\DSPToolbox\DSPUI\obj\Debug\DSPUI.pdb

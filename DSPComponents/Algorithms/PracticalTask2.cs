@@ -22,65 +22,131 @@ namespace DSPAlgorithms.Algorithms
         {
             Signal InputSignal = LoadSignal(SignalPath);
             
-            Console.WriteLine(InputSignal); //display the given signal
 
             FIR f = new FIR();
             f.InputTimeDomainSignal = InputSignal;
-            f.InputFilterType = DSPAlgorithms.DataStructures.FILTER_TYPES.LOW;
-            f.InputTransitionBand = maxF - miniF;
+            if (miniF != 0 && maxF != 0)
+            {
+                f.InputFilterType = DSPAlgorithms.DataStructures.FILTER_TYPES.BAND_PASS;
+                f.InputF1 = miniF;
+                f.InputF2 = maxF;
+            }
+            else if (miniF == 0 && maxF != 0)
+            {
+                f.InputFilterType = DSPAlgorithms.DataStructures.FILTER_TYPES.LOW;
+                f.InputCutOffFrequency = maxF;
+            }
+            else if (miniF != 0 && maxF == 0)
+            {
+                f.InputFilterType = DSPAlgorithms.DataStructures.FILTER_TYPES.HIGH;
+                f.InputCutOffFrequency = miniF;
+            }
             f.InputFS = Fs;
             f.InputStopBandAttenuation = 50;
-            f.InputCutOffFrequency = 1500;
             f.InputTransitionBand = 500;
-            f.Run();  // filter signal with fir filter with band maxf and minif
+            f.Run();  
 
-            StreamWriter WriteInFile = new StreamWriter("FIRCoefficients.txt");
-            for (int i = 0; i < f.OutputHn.Samples.Count(); i++)
-                WriteInFile.WriteLine(f.OutputHn.Samples[i]);
-            WriteInFile.Close();
 
-            if (newFs >= 2 * maxF)
+            /*StreamWriter WriteInFile = new StreamWriter("FilteredSignal.txt");
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(f.OutputYn.Samples.Count());
+            for (int i = 0; i < f.OutputYn.Samples.Count(); i++)
             {
-                Sampling s = new Sampling();
+                WriteInFile.Write(f.OutputYn.SamplesIndices[i]);
+                WriteInFile.Write(" ");
+                WriteInFile.Write(f.OutputYn.Samples[i]);
+                WriteInFile.WriteLine(" ");
+            }
+            WriteInFile.Close();*/
+            
+
+            Sampling s = new Sampling();
+            if (newFs >= Fs/2)
+            {
                 s.L = L;
                 s.M = M;
+                s.InputSignal = f.OutputYn;
                 s.Run();
-                StreamWriter WriteInFile2 = new StreamWriter("Sampled_Signal.txt");
+                /*WriteInFile = new StreamWriter("SampledSignal.txt");
+                WriteInFile.WriteLine(0);
+                WriteInFile.WriteLine(0);
+                WriteInFile.WriteLine(s.OutputSignal.Samples.Count());
                 for (int i = 0; i < s.OutputSignal.Samples.Count(); i++)
-                    WriteInFile2.WriteLine(s.OutputSignal.Samples.Count());
-                WriteInFile2.Close();
+                {
+                    WriteInFile.Write(s.OutputSignal.SamplesIndices[i]);
+                    WriteInFile.Write(" ");
+                    WriteInFile.Write(s.OutputSignal.Samples[i]);
+                    WriteInFile.WriteLine(" ");
+                }
+                WriteInFile.Close();*/
             }
             else
                 Console.WriteLine("newFs is not valid");
+            
 
+            DC_Component dc = new DC_Component();
+            dc.InputSignal= s.OutputSignal;
+            dc.Run();
+            
 
-            DC_Component remove_dc = new DC_Component();
-            remove_dc.InputSignal= InputSignal;
-            remove_dc.Run();
-            StreamWriter WriteInFile3 = new StreamWriter("Removed_DC.txt");
-            for (int i = 0; i < remove_dc.OutputSignal.Samples.Count(); i++)
-                 WriteInFile3.WriteLine(remove_dc.OutputSignal.Samples.Count());
-            WriteInFile3.Close();
-            Console.WriteLine(remove_dc.OutputSignal); // display resulted signal after removing dc component
+            /*WriteInFile = new StreamWriter("DC_Removed_Signal.txt");
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(dc.OutputSignal.Samples.Count());
+            for (int i = 0; i < dc.OutputSignal.Samples.Count(); i++)
+            {
+                WriteInFile.Write(dc.OutputSignal.SamplesIndices[i]);
+                WriteInFile.Write(" ");
+                WriteInFile.Write(dc.OutputSignal.Samples[i]);
+                WriteInFile.WriteLine(" ");
+            }
+            WriteInFile.Close();*/
+
 
             Normalizer n = new Normalizer();
-            n.InputSignal = InputSignal;
+            n.InputSignal = dc.OutputSignal;
             n.InputMinRange = -1;
             n.InputMaxRange = 1;
             n.Run();
-            StreamWriter WriteInFile4 = new StreamWriter("Normalized_Signal.txt");
+
+
+            /*WriteInFile = new StreamWriter("Normalized_Signal.txt");
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(n.OutputNormalizedSignal.Samples.Count());
             for (int i = 0; i < n.OutputNormalizedSignal.Samples.Count(); i++)
-                WriteInFile4.WriteLine(n.OutputNormalizedSignal.Samples.Count());
-            Console.WriteLine(n.OutputNormalizedSignal); // display normalized signal
+            {
+                WriteInFile.Write(n.OutputNormalizedSignal.SamplesIndices[i]);
+                WriteInFile.Write(" ");
+                WriteInFile.Write(n.OutputNormalizedSignal.Samples[i]);
+                WriteInFile.WriteLine(" ");
+            }
+            WriteInFile.Close();*/
+
 
             DiscreteFourierTransform d = new DiscreteFourierTransform();
-            d.InputSamplingFrequency = newFs;
-            d.InputTimeDomainSignal = InputSignal;
+            d.InputSamplingFrequency = Fs;
+            d.InputTimeDomainSignal = n.OutputNormalizedSignal;
             d.Run();
-            StreamWriter WriteInFile5 = new StreamWriter("DFT_Signal.txt");
-            for (int i = 0; i < d.OutputFreqDomainSignal.Samples.Count(); i++)
-                WriteInFile5.WriteLine(d.OutputFreqDomainSignal.Samples.Count());
-            Console.WriteLine(d.OutputFreqDomainSignal); // display DFT signal
+            OutputFreqDomainSignal = d.OutputFreqDomainSignal;
+            
+            /*
+            WriteInFile = new StreamWriter("FreqDomSignal.txt");
+            WriteInFile.WriteLine(1);
+            WriteInFile.WriteLine(0);
+            WriteInFile.WriteLine(d.OutputFreqDomainSignal.Frequencies.Count());
+            for (int i = 0; i < d.OutputFreqDomainSignal.Frequencies.Count(); i++)
+            {
+                WriteInFile.Write(d.OutputFreqDomainSignal.Frequencies[i]);
+                WriteInFile.Write(" ");
+                WriteInFile.Write(d.OutputFreqDomainSignal.FrequenciesAmplitudes[i]);
+                WriteInFile.Write(" ");
+                WriteInFile.Write(d.OutputFreqDomainSignal.FrequenciesPhaseShifts[i]);
+                WriteInFile.WriteLine(" ");
+            }
+            WriteInFile.Close();
+            */
         }
 
         public Signal LoadSignal(string filePath)

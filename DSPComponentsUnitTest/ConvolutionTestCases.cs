@@ -99,7 +99,7 @@ namespace DSPComponentsUnitTest
             var expectedOutput = new Signal(new List<float>() { 0.5f, 1, 1, 1, 1.5f, 2, 1.5f, 0.5f }, false);
 
             fc.InputSignal1 = new Signal(new List<float>() { 1, 0, 0, 1, 1}, false);
-            fc.InputSignal2 = new Signal(new List<float>() { 0.5f, 1, 1, 0.5f }, false);
+            fc.InputSignal2 = new Signal(new List<float>() { 0.5f, 1, 1, 0.5f}, false);
 
             fc.Run();
 
