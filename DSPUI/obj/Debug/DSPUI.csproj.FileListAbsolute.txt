@@ -61,30 +61,3 @@ G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPTo
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
 G:\[Hadeer] Lenovo Laptop\My Stuff\Signal Processing\2016-2017\DSP Toolbox\DSPToolbox\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.Cache
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\Media\Warning.png
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\DSPUI.exe.config
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\DSPUI.exe
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\DSPUI.pdb
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\DSPComponents.dll
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\OxyPlot.dll
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\OxyPlot.WindowsForms.dll
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\DSPComponents.pdb
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\OxyPlot.pdb
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\OxyPlot.xml
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\OxyPlot.WindowsForms.pdb
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\bin\Debug\OxyPlot.WindowsForms.xml
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.csprojResolveAssemblyReference.cache
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.DiscreteFourierTransform.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FastFourierTransform.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FileInputSignal.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.FIR.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MovingAverage.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.MultiplySignalByConstant.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Normalizer.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.QuantizationAndEncoding.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.ComponentsAttriutesEditor.Shifter.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.DSPToolbox.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.Properties.Resources.resources
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.csproj.GenerateResource.Cache
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.exe
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPUI\obj\Debug\DSPUI.pdb

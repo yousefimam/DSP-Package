@@ -1,5 +1,0 @@
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPComponents\bin\Debug\DSPComponents.dll
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPComponents\bin\Debug\DSPComponents.pdb
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPComponents\obj\Debug\DSPAlgorithms.csprojResolveAssemblyReference.cache
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPComponents\obj\Debug\DSPComponents.dll
-C:\FCIS\DSP\DSPpackage\DSP-Package\DSPComponents\obj\Debug\DSPComponents.pdb
