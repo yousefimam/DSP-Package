@@ -13,9 +13,15 @@ namespace DSPAlgorithms.Algorithms
         public int ShiftingValue { get; set; }
         public Signal OutputShiftedSignal { get; set; }
 
+        public List<float> Sample_size = new List<float>();
         public override void Run()
         {
-            throw new NotImplementedException();
+            OutputShiftedSignal = new Signal(Sample_size, true);
+            for (int i = 0; i < InputSignal.Samples.Count(); i++)
+            {
+                OutputShiftedSignal.Samples.Add(InputSignal.Samples[i]);
+                OutputShiftedSignal.SamplesIndices.Add(InputSignal.SamplesIndices[i] - ShiftingValue);
+            }
         }
     }
 }
