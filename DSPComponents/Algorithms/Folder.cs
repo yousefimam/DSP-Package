@@ -19,9 +19,6 @@ namespace DSPAlgorithms.Algorithms
             for (int i = 0; i <= count; i++)
             {
                 OutputFoldedSignal.Samples.Add(InputSignal.Samples[count - i]);
-            }
-            for (int i = 0; i <= count; i++)
-            {
                 OutputFoldedSignal.SamplesIndices.Add(InputSignal.SamplesIndices[i]);
             }
         }
