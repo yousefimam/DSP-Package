@@ -18,7 +18,6 @@ namespace DSPAlgorithms.Algorithms
         {
             List<float> FirstDerivativeList = new List<float>();
             List<float> SecondDerivativeList = new List<float>();
-            float FirstDerv;
             float SecondDerv;
             int j;
   

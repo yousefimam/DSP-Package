@@ -16,6 +16,12 @@ namespace DSPAlgorithms.Algorithms
         {
             int count = InputSignal.Samples.Count() - 1;
             OutputFoldedSignal = new Signal(new List<float>(), false);
+            if (InputSignal.Periodic == true)
+            {
+                OutputFoldedSignal.Periodic = false;
+            }
+            else
+                OutputFoldedSignal.Periodic = true;
             for (int i = count; i >= 0; i--)
             {
                 OutputFoldedSignal.Samples.Add(InputSignal.Samples[i]);
