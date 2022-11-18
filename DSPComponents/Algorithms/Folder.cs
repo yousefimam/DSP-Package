@@ -16,10 +16,10 @@ namespace DSPAlgorithms.Algorithms
         {
             int count = InputSignal.Samples.Count() - 1;
             OutputFoldedSignal = new Signal(new List<float>(), false);
-            for (int i = 0; i <= count; i++)
+            for (int i = count; i >= 0; i--)
             {
-                OutputFoldedSignal.Samples.Add(InputSignal.Samples[count - i]);
-                OutputFoldedSignal.SamplesIndices.Add(InputSignal.SamplesIndices[i]);
+                OutputFoldedSignal.Samples.Add(InputSignal.Samples[i]);
+                OutputFoldedSignal.SamplesIndices.Add(InputSignal.SamplesIndices[i]*(-1));
             }
         }
     }
