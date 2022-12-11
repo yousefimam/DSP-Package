@@ -51,7 +51,7 @@ namespace DSPAlgorithms.Algorithms
             }
             else if (InputFilterType == FILTER_TYPES.HIGH)
             {
-                float F_DASH = (InputCutOffFrequency.Value + (InputTransitionBand / 2)) / InputFS;
+                float F_DASH = (InputCutOffFrequency.Value - (InputTransitionBand / 2)) / InputFS;
                 List<float> windows = CalculateW(start, InputStopBandAttenuation);
                 float N = start * 2 + 1;
                 for (int i = 0; i < N; i++)
@@ -97,8 +97,8 @@ namespace DSPAlgorithms.Algorithms
             }
             else
             {
-                float F_DASH1 = (InputF1.Value - (InputTransitionBand / 2)) / InputFS;
-                float F_DASH2 = (InputF2.Value + (InputTransitionBand / 2)) / InputFS;
+                float F_DASH1 = (InputF1.Value + (InputTransitionBand / 2)) / InputFS;
+                float F_DASH2 = (InputF2.Value - (InputTransitionBand / 2)) / InputFS;
                 List<float> windows = CalculateW(start, InputStopBandAttenuation);
                 float N = start * 2 + 1;
                 for (int i = 0; i < N; i++)
@@ -122,7 +122,7 @@ namespace DSPAlgorithms.Algorithms
             DirectConvolution dc = new DirectConvolution();
 
             dc.InputSignal1 = InputTimeDomainSignal;
-            dc.InputSignal2 = new Signal(OutputHn.Samples,OutputHn.SamplesIndices ,  false);
+            dc.InputSignal2 = new Signal(OutputHn.Samples,OutputHn.SamplesIndices,false);
 
             dc.Run();
 
