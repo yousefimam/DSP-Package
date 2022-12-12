@@ -23,8 +23,11 @@ namespace DSPAlgorithms.Algorithms
                 for(int i = 0; i < InputSignal.Samples.Count; i++)
                 {
                     list_of_signal_values.Add(InputSignal.Samples[i]);
-                    for(int j = 0; j < L-1; j++)
-                        list_of_signal_values.Add(0);
+                    if (i < InputSignal.Samples.Count - 1)
+                    {
+                        for (int j = 0; j < L - 1; j++)
+                            list_of_signal_values.Add(0);
+                    }                   
                 }
                 InputSignal = new Signal(list_of_signal_values, false);
                 FIR f = new FIR();
@@ -61,9 +64,10 @@ namespace DSPAlgorithms.Algorithms
                 for (int i = 0; i < InputSignal.Samples.Count; i++)
                 {
                     list_of_signal_values2.Add(InputSignal.Samples[i]);
-                    for (int j = 0; j < L-1; j++)
+                    if (i < InputSignal.Samples.Count - 1)
                     {
-                        list_of_signal_values2.Add(0);
+                        for (int j = 0; j < L - 1; j++)
+                            list_of_signal_values2.Add(0);
                     }
                 }
                 InputSignal = new Signal(list_of_signal_values2, false);
