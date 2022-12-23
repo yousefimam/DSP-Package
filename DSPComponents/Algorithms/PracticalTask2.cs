@@ -62,7 +62,7 @@ namespace DSPAlgorithms.Algorithms
             
 
             Sampling s = new Sampling();
-            if (newFs >= Fs/2)
+            if (newFs >= 2 * maxF)
             {
                 s.L = L;
                 s.M = M;
@@ -126,7 +126,10 @@ namespace DSPAlgorithms.Algorithms
 
 
             DiscreteFourierTransform d = new DiscreteFourierTransform();
-            d.InputSamplingFrequency = Fs;
+            if (newFs >= 2 * maxF)
+                d.InputSamplingFrequency = newFs;
+            else
+                d.InputSamplingFrequency = Fs;
             d.InputTimeDomainSignal = n.OutputNormalizedSignal;
             d.Run();
             OutputFreqDomainSignal = d.OutputFreqDomainSignal;
